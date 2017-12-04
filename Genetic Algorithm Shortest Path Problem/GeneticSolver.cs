@@ -114,7 +114,7 @@ namespace Genetic_Algorithm_Shortest_Path_Problem
             // на выходе популяция состоит из родителей и получившихся потомков
             int nextGenerationSize = random.Next(minPopulationSize, maxPopulationSize);
             int requiredChildrenCount = nextGenerationSize - parentPool.Count;
-            while (requiredChildrenCount > 0 && parentPool.Count > 0)
+            while (requiredChildrenCount > 0 && parentPool.Count > 1)
             {
                 Chromosome parent = parentPool.ElementAt(random.Next(parentPool.Count));
                 parentPool.Remove(parent);
