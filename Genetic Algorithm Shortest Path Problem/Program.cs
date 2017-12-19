@@ -12,14 +12,14 @@ namespace Genetic_Algorithm_Shortest_Path_Problem
         static void Main(string[] args)
         {
             int pathStart = 0, pathEnd = 0;
-            EdgeList graph = LoadGraph("d:\\dump\\graph4.txt", ref pathStart, ref pathEnd);
+            EdgeList graph = LoadGraph("d:\\dump\\graph5.txt", ref pathStart, ref pathEnd);
             Console.WriteLine("Loaded graph:\n");
             Console.WriteLine(graph.ToString());
 
             Random rand = new Random();
-            int maxGenerations = 100;
-            int minPopulationSize = 10, maxPopulationSize = 30;
-            float mutationRate = rand.Next(5, 10) / 100.0f;
+            int maxGenerations = 200;
+            int minPopulationSize = 20, maxPopulationSize = 30;
+            float mutationRate = rand.Next(10, 15) / 100.0f;
             int reportEvery = 10;
 
             GeneticSolver solver = new GeneticSolver(maxGenerations, minPopulationSize,
